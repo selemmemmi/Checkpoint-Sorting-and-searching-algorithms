@@ -1,0 +1,18 @@
+ALGORITHM Insertion_sort
+VAR
+    set : ARRAY_OF INTEGER[n];
+    i,j,tmp:INTEGER
+BEGIN
+    FOR i FROM 1 TO n-1 STEP 1  DO
+        tmp:=set[i]
+        j:=i-1
+        WHILE (j>=0) DO
+            IF (tmp<set[j]) THEN
+                set[j+1]:=set[j]
+            END_IF
+        ELSE 
+            set[j+1]:=tmp
+        j--
+        END_WHILE
+    END_FOR
+END
